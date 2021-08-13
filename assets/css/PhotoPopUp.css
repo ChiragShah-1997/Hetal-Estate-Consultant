@@ -1,0 +1,614 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'open_sansregular', Tahoma, Geneva, sans-serif;
+	background: #000000
+}
+
+.clr {
+	clear: both
+}
+
+.propertySliderCont {
+	padding: 0px;
+	margin: 0px;
+	position: relative
+}
+
+.propertySliderTitle {
+	padding: 0px;
+	font-size: 14px;
+	color: #ffffff;
+	position: absolute;
+	left: 18px;
+	top: 10px;
+	z-index: 99
+}
+
+#propertyImgTitle {
+	padding: 0px 15px 0px 0px;
+	float: left
+}
+
+#curPageTotalPage {
+	padding: 0px 15px 0px 0px;
+	float: left;
+	color: #999999
+}
+
+#propertyImageSlider {
+	padding: 0px;
+	margin: 0px;
+	position: relative;
+	height: 383px;
+	clear: both;
+	overflow: hidden
+}
+
+#propertyImageSlider ul {
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none
+}
+
+#propertyImageSlider ul li {
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	display: none;
+	overflow: hidden;
+  z-index: 9;
+  background: url("../../assets/gifs/loading-bars-small.gif.gif") no-repeat center center;
+	/* background: #000 url("../images/loading-bars-small.gif") no-repeat center center */
+}
+
+#propertyImageSlider ul li img {
+	max-height: 383px;
+	max-width: 580px;
+	vertical-align: middle
+}
+
+#propertyImageSlider #btnSliderNext,
+#propertyImageSlider #btnSliderPrev {
+	position: absolute;
+	top: 0px;
+	width: 50%;
+	height: 100%;
+	cursor: pointer;
+	z-index: 99
+}
+
+#propertyImageSlider #btnSliderNext {
+	right: 0px
+}
+
+#propertyImageSlider #btnSliderPrev {
+	left: 0px
+}
+
+#propertyImageSlider #btnSliderNext.btnNextPrev25,
+#propertyImageSlider #btnSliderPrev.btnNextPrev25 {
+	width: 25%
+}
+
+#propertyImageSlider #btnSliderNext .buttonNext,
+#propertyImageSlider #btnSliderPrev .buttonPrev {
+	position: absolute;
+	top: 50%;
+	width: 28px;
+	height: 44px;
+	margin-top: -22px;
+	cursor: pointer;
+	z-index: 99;
+	opacity: .6
+}
+
+#propertyImageSlider #btnSliderNext:hover .buttonNext,
+#propertyImageSlider #btnSliderPrev:hover .buttonPrev {
+	opacity: 1
+}
+
+#propertyImageSlider #btnSliderNext .buttonNext {
+	/*  background: url("../../assets/gifs/loading-bars-small.gif.gif") no-repeat center center;: url("../images/photoSriteIcons.png") no-repeat 0px 0px; */
+	right: 12px
+}
+
+#propertyImageSlider #btnSliderPrev .buttonPrev {
+	/* background: url("../images/photoSriteIcons.png") no-repeat 0px -62px; */
+	left: 12px
+}
+
+#propertyImageSlider .btnNextPrevHide {
+	display: none !important
+}
+
+.propertyThumbCont {
+	padding: 10px 9px;
+	margin: 0px;
+	position: relative;
+	border-bottom: 1px solid #333333;
+	z-index: 10;
+	box-shadow: 0 0 70px #000000
+}
+
+.propertyThumbCont .btnThumbNext,
+.propertyThumbCont .btnThumbPrev {
+	position: absolute;
+	top: 22px;
+	width: 20px;
+	height: 28px;
+	cursor: pointer
+}
+
+.propertyThumbCont .btnThumbPrev {
+	left: 10px;
+	/* background: url("../images/photoSriteIcons.png") no-repeat 0px -162px */
+}
+
+.propertyThumbCont .btnThumbNext {
+	right: 10px;
+	/* background: url("../images/photoSriteIcons.png") no-repeat 0px -120px */
+}
+
+.propertyThumbCont .btnThumbDisable {
+	opacity: .1;
+	filter: alpha(opacity=10);
+	cursor: default
+}
+
+.propertyThumbCont .btnThumbNextTemp,
+.propertyThumbCont .btnThumbPrevTemp {
+	position: absolute;
+	top: 22px;
+	width: 20px;
+	height: 28px;
+	cursor: pointer
+}
+
+.propertyThumbCont .btnThumbPrevTemp {
+	left: 10px;
+	/* background: url("../images/photoSriteIcons.png") no-repeat 0px -162px */
+}
+
+.propertyThumbCont .btnThumbNextTemp {
+	right: 10px;
+	/* background: url("../images/photoSriteIcons.png") no-repeat 0px -120px */
+}
+
+#propertyImageSliderThumb {
+	padding: 0px;
+	margin: 0px 40px 0px 35px;
+	overflow: hidden;
+	height: 50px;
+	position: relative
+}
+
+#propertyImageSliderThumb ul {
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+	position: absolute;
+	left: 0px;
+	top: 0px
+}
+
+#propertyImageSliderThumb ul li {
+	padding: 0px;
+	margin: 0px 5px;
+	float: left;
+	width: 70px;
+	height: 50px;
+	cursor: pointer;
+	position: relative;
+	/* background: url("../images/loading-bars-small.gif") no-repeat center center */
+}
+
+#propertyImageSliderThumb ul li img {
+	height: 50px;
+	width: 70px
+}
+
+#propertyImageSliderThumb ul li .imageHover {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: #000000;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	display: block
+}
+
+#propertyImageSliderThumb ul li .iconVideo {
+	margin: -12px 0px 0px -16px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 32px;
+	height: 24px;
+	/* background: url(../images/youtube-play-button.svg) no-repeat 0px 0px; */
+	background-size: cover
+}
+
+#propertyImageSliderThumb ul li:hover .imageHover {
+	display: none
+}
+
+#propertyImageSliderThumb ul li.active .imageHover {
+	display: none
+}
+
+.zoomControl {
+	position: absolute;
+	right: 12px;
+	top: 10px;
+	z-index: 105
+}
+
+.btnZoomIn {
+	margin-top: 12px;
+	width: 24px;
+	height: 24px;
+	/* background: url("../images/photoSriteIcons.png") no-repeat 0px -249px; */
+	cursor: pointer
+}
+
+.btnZoomOut {
+	margin-top: 12px;
+	width: 24px;
+	height: 24px;
+	/* background: url("../images/photoSriteIcons.png") no-repeat 0px -293px; */
+	cursor: pointer
+}
+
+#btnZoomDefault {
+	margin-top: 12px;
+	width: 22px;
+	height: 24px;
+	/* background: url("../images/photoSriteIcons.png") no-repeat 0px -206px; */
+	cursor: pointer
+}
+
+.btnZoomInTemp {
+	margin-top: 12px;
+	width: 24px;
+	height: 24px;
+	/* background: url("../images/photoSriteIcons.png") no-repeat 0px -249px; */
+	cursor: pointer
+}
+
+.btnZoomOutTemp {
+	margin-top: 12px;
+	width: 24px;
+	height: 24px;
+	/* background: url("../images/photoSriteIcons.png") no-repeat 0px -293px; */
+	cursor: pointer
+}
+
+#propertyImageSlider ul li .imageZoomScrollBound img {
+	width: auto;
+	height: auto;
+	max-height: none;
+	max-width: none;
+	object-fit: contain
+}
+
+#propertyImageSlider ul li .imageZoomScrollBound .ui-draggable {
+	cursor: move
+}
+
+#propertySliderSection {
+	background: #000000
+}
+
+.photoTowerCont {
+	padding: 10px 0px 0px 60px;
+	background: #ffffff;
+	height: 40px;
+	position: relative;
+	z-index: 100
+}
+
+.photoTowerCont .showLabel {
+	padding: 5px 15px 0px 0px;
+	float: left;
+	font-size: 14px;
+	color: #666666
+}
+
+.photoTowerCont .towerDropDown {
+	padding: 0px;
+	margin: 0px 9px 0px 12px;
+	float: left;
+	width: 110px;
+	height: 28px;
+	font-size: 14px;
+	color: #666666;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	background: #f8f8f8;
+	position: relative;
+	cursor: pointer
+}
+
+.photoTowerCont #towerValue {
+	padding: 4px 0px 0px 10px;
+	width: 75px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis
+}
+
+.photoTowerCont .towerDropDown .moreArrow {
+	position: absolute;
+	right: 15px;
+	top: 12px;
+	width: 0px;
+	height: 0px;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 4px solid #666666;
+	vertical-align: middle
+}
+
+.photoTowerCont .towerDropDown ul {
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+	position: absolute;
+	left: 0px;
+	top: 27px;
+	width: 110px;
+	background: #ffffff;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+	display: none
+}
+
+.photoTowerCont .towerDropDown ul li {
+	padding: 6px 10px;
+	margin: 0px;
+	cursor: pointer;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis
+}
+
+.photoTowerCont .towerDropDown ul li:hover {
+	background: #f5f5f5
+}
+
+.photoTowerCont .towerDropDown:hover ul {
+	display: block
+}
+
+.photoCatogaryCont {
+	background: #f8f8f8;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+	position: relative;
+	z-index: 15
+}
+
+.photoCatogaryCont .btnCatNext,
+.photoCatogaryCont .btnCatPrev {
+	position: absolute;
+	top: 12px;
+	width: 20px;
+	height: 28px;
+	cursor: pointer;
+	z-index: 16;
+	display: none
+}
+
+.photoCatogaryCont .btnCatPrev {
+	left: 10px;
+	/* background: url("../images/photoSriteIcons.png") no-repeat 0px -337px */
+}
+
+.photoCatogaryCont .btnCatNext {
+	right: 50px;
+	/* background: url("../images/photoSriteIcons.png") no-repeat 0px -379px */
+}
+
+.photoCatogaryNav {
+	margin: 0px 80px 0px 40px;
+	height: 46px;
+	overflow: hidden
+}
+
+.photoCatogaryNav.margin0 {
+	margin: 0px
+}
+
+.photoCatogaryNav ul {
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+	white-space: nowrap
+}
+
+.photoCatogaryNav ul li {
+	padding: 0px 20px 0px;
+	margin: 0px 0px 0px -4px;
+	height: 41px;
+	border-bottom: 5px solid transparent;
+	display: inline-block;
+	font-size: 14px;
+	color: #666666;
+	cursor: pointer;
+	position: relative
+}
+
+.photoCatogaryNav ul li a {
+	text-decoration: none;
+	color: #666666;
+	height: 28px;
+	display: block;
+	padding-top: 13px
+}
+
+.photoCatogaryNav ul li span {
+	text-decoration: none;
+	color: #666666;
+	height: 28px;
+	display: block;
+	padding-top: 13px
+}
+
+.photoCatogaryNav ul li:hover {
+	border-bottom-color: #c0392b;
+	color: #333333
+}
+
+.photoCatogaryNav ul li.selected {
+	border-bottom-color: #c0392b;
+	color: #333333
+}
+
+.photoCatogaryNav ul li.selected a {
+	color: #333333
+}
+
+.photoCatogaryCont.withCntactBtn .btnCatNext {
+	right: 230px
+}
+
+.photoCatogaryCont.withCntactBtn .photoCatogaryNav {
+	margin-right: 260px
+}
+
+.btnContactNow {
+	float: right;
+	background: #c0392b;
+	border-radius: 3px;
+	cursor: pointer;
+	width: 130px;
+	height: 32px;
+	line-height: 30px;
+	margin: 7px 48px 0px 0px;
+	padding: 0px;
+	color: #fff;
+	font-size: 16px;
+	font-family: "opensans-semibold";
+	text-align: center;
+	position: absolute;
+	top: 0px;
+	right: 0px
+}
+
+.btnContactNow:after {
+	content: '';
+	float: left;
+	width: 1px;
+	height: 24px;
+	margin: 4px 0px 0px -20px;
+	background-color: #d7d7d7
+}
+
+.photoContactFormOverlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 999;
+	display: none
+}
+
+.photoContactForm {
+	background: #ffffff;
+	display: none;
+	left: 50%;
+	margin: 0 0 0 -197px;
+	padding: 20px 0px 0px;
+	position: fixed;
+	top: 60px;
+	width: 394px;
+	height: 385px;
+	z-index: 1000
+}
+
+.photoContactForm .closeForm {
+	position: relative
+}
+
+.photoContactForm .closeForm span {
+	width: 19px;
+	height: 19px;
+	/* background: url("../images/photoPopupCloseIcon2.png") no-repeat left top; */
+	cursor: pointer;
+	position: absolute;
+	right: -25px;
+	top: -20px
+}
+
+.photoContactForm .formCont {
+	background: #fff
+}
+
+.photoCatogaryCont .contactedPhone,
+.photoCatogaryCont .contactedAgent {
+	background: #0c9629;
+	border: 1px solid #0c9629
+}
+
+#projectContactFormDiv {
+	left: 50%;
+	margin-left: -161px;
+	position: fixed;
+	top: 65px;
+	width: 322px;
+	z-index: 9999
+}
+
+.closeConSec {
+	position: relative
+}
+
+.closeConSec .closeConIcon {
+	position: absolute;
+	top: 0px;
+	right: -24px;
+	width: 22px;
+	height: 22px;
+	cursor: pointer
+}
+
+.closeConSec .closeConIcon:before {
+	content: "";
+	position: absolute;
+	left: 0px;
+	top: 50%;
+	width: 22px;
+	height: 2px;
+	background-color: rgba(255, 255, 255, 0.8);
+	transform: skewY(-45deg);
+	z-index: -1
+}
+
+.closeConSec .closeConIcon:after {
+	content: "";
+	position: absolute;
+	left: 0px;
+	top: 50%;
+	width: 22px;
+	height: 2px;
+	background-color: rgba(255, 255, 255, 0.8);
+	transform: skewY(45deg);
+	z-index: -1
+}
+
+#qna_userProBlock .parentBlk--with286 {
+	width: auto !important;
+	padding: 0px 15px 0px 12px
+}
+
+
+/*# sourceMappingURL=maps/mbPhotoPopupSlider.css.map */
